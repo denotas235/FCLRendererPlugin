@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.1)
+project("maliplugin")
+add_library(maliplugin SHARED plugin_native.c)
+find_library(log-lib log)
+find_library(EGL-lib EGL)
+target_link_libraries(maliplugin ${log-lib} ${EGL-lib})
