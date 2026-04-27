@@ -4,7 +4,8 @@ public class PluginNative {
     static {
         try {
             System.loadLibrary("maliplugin");
-        } catch (UnsatisfiedLinkError ignored) {}
+        } catch (UnsatisfiedLinkError ignored) {
+        }
     }
 
     public static native String getGLExtensions();
